@@ -103,3 +103,18 @@ La página "Panel" contendrá en la esquina superior derecha:
 - Haciendo click en este elemento, la aplicación mostrará un modal preguntando si deseas salir de la aplicación
 - En caso afirmativo, desconectar al usuario y redirigir a la página de Login
 - En caso negativo, solo quitar el modal
+
+![image](https://github.com/TheBridge-FullStackDeveloper/fs-pt0123-url-shorter-exercise/assets/31268447/755fa4c4-5abf-40fe-ae02-598db04be9e0)
+
+## EXTRA
+
+Tienes todavía energias? Añade dos validaciones extras!
+
+### Frontend
+
+Cuando el usuario pegue una URL, comprueba que al menos contenga "http://" o "https://" o busca alguna expresión regular para que valide que sea una URL válida
+
+### Backend
+
+Cuando te llegue una URL para generar una nueva URL corta, valida que la URL recibida llegue a algún sitio, para eso intenta obtener un statusCode de 200 haciendo una petición a dicha URL.
+Si no obtienes un código 2XX, devuelve un error
