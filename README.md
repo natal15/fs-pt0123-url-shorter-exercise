@@ -7,7 +7,7 @@ Si no tengo cuenta deberé registrarme para poder acceder a la página principal
 Si tengo cuenta, puedo ir a la página de login para acceder (debería haber un link en la página de registro que me lleve a login y viceversa).
 
 Una vez registrado y logado, la aplicación deberá redirigirme automáticamente a la página principal, donde veré un campo de texto para introducir la URL que quiero acortar
-y un botón para obtener la URL acortada. A la derecha debería ver una lista con las URLs que, como usuario, he creado (en caso de no haber creado ninguna, debería aparecer un mensaje indicándolo)
+y un botón para obtener la URL acortada. Debajo (o a la derecha en escritorio) debería ver una lista con las URLs que, como usuario, he creado (en caso de no haber creado ninguna, debería aparecer un mensaje indicándolo)
 
 En dicha lista, también debería aparecer el número de veces totales que ha sido usada cada URL, el número de veces que el usuario la ha usado y el número de veces que otros usuarios
 (independientemente de que estuvieran registrados en la aplicación) la han usado.
@@ -90,7 +90,7 @@ La página "Panel" contendrá en el centro:
 - Botón "Generate" (desactivado si el campo anterior está vacío)
 - Section donde aparecerá la URL generada (pon un icono al lado de un portapapeles). Este elemento será clickable y tendrá la característica de pegar la URL que contiene en el portapapeles
 
-La página "Panel" contendrá a la derecha:
+La página "Panel", debajo (derecha en escritorio) contendrá:
 - Lista con todas las URLs acortadas generadas por el usuario que está logado
 - Cada elemento será: URL, número de usos totales, número de usos del usuario logado
 - Si dejamos el cursor encima de la URL, aparecerá un tooltip (texto emergente) con la URL a la que apunta
