@@ -60,4 +60,46 @@ Crea un nuevo endpoint GET /short/:id (puede ser usado por cualquier usuario):
 - Si el usuario que ha hecho la petición es el mismo usuario que está logado, suma 1 también a "uses_by_creator"
 - Devuelve una orden de redirección al cliente a la URL de la BBDD "origin_url" (busca cómo devolver un redirect a cliente)
 
+Modifica el endpoint para obtener la información del usuario y que satisfaga las necesidades de la parte cliente (Panel)
+
 ### Frontend
+
+*Empieza el proyecto pensando y maquetando siempre en móvil, luego en escritorio
+
+Debemos tener 3 páginas:
+- Register (Sin proteger, pero si estamos logados, nos redirigirá al Panel)
+- Login (Sin proteger, pero si estamos logados, nos redirigirá al Panel)
+- Panel (Protegida, si no estamos logados, nos redirigirá al Login)
+
+La página "Register" contendrá un formulario:
+- Título h1 "Create account"
+- Campo email (requerido)
+- Campo username (requerido)
+- Campo password (requerido, longitud mínima de 4 caracteres)
+- Campo submit (si todo va bien, redirigir a Login)
+
+La página "Login" contendrá un formulario:
+- Título h1 "Login"
+- Campo email (requerido)
+- Campo password (requerido, longitud mínima de 4 caracteres)
+- Campo submit (si todo va bien, redirigir a Panel)
+
+La página "Panel" contendrá en el centro:
+- Título h1 "Panel"
+- Campo para introducir la URL que se quiere acortar
+- Botón "Generate" (desactivado si el campo anterior está vacío)
+- Section donde aparecerá la URL generada (pon un icono al lado de un portapapeles). Este elemento será clickable y tendrá la característica de pegar la URL que contiene en el portapapeles
+
+La página "Panel" contendrá a la derecha:
+- Lista con todas las URLs acortadas generadas por el usuario que está logado
+- Cada elemento será: URL, número de usos totales, número de usos del usuario logado
+- Si dejamos el cursor encima de la URL, aparecerá un tooltip (texto emergente) con la URL a la que apunta
+- Si clickamos en alguno de estos elementos, el fondo cambiará de color y le URL acortada irá a nuestro portapapeles
+- Cuando se genere una nueva URL acortada, esta lista deberá actualizarse con la nueva URL
+
+La página "Panel" contendrá en la esquina superior derecha:
+- El nombre del usuario en negrita
+- Justo al lado habrá un botón o un icono de apagado
+- Haciendo click en este elemento, la aplicación mostrará un modal preguntando si deseas salir de la aplicación
+- En caso afirmativo, desconectar al usuario y redirigir a la página de Login
+- En caso negativo, solo quitar el modal
