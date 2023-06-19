@@ -7,7 +7,7 @@ const Login = () => {
   const doLogin = useLogin();
   useGuard();
 
-  const { errors, email, username, password } = login;
+  const { errors, email, password } = login;
 
   return (
     <section>

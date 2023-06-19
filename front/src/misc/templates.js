@@ -8,6 +8,34 @@ export const login = {
       required: true,
     },
   },
+ 
+  password: {
+    props: {
+      id: "password",
+      type: "password",
+      placeholder: "******",
+    },
+    validation: {
+      required: true,
+      minLength: 4,
+    },
+  },
+  errors: {
+    required: "This field is mandatory",
+    minLength: "4 length at least is required",
+  },
+};
+
+export const signup = {
+  email: {
+    props: {
+      id: "email",
+      placeholder: "user@user.com",
+    },
+    validation: {
+      required: true,
+    },
+  },
   username: {
     props: {
       id: "username",

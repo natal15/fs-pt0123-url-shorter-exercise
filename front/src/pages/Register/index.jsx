@@ -1,19 +1,19 @@
 import { useForm } from "react-hook-form";
-import { useGuard, useLogin } from "../../hooks";
-import { login } from "../../misc/templates";
+import { useGuard, useSignup } from "../../hooks";
+import { signup } from "../../misc/templates";
 
-const Register = () => {
+const Signup = () => {
   const { register, formState, handleSubmit } = useForm();
-  const doLogin = useLogin();
+  const doSignup = useSignup();
   useGuard();
 
-  const { errors, email, username, password } = login;
+  const { errors, email, username, password } = signup;
 
   return (
     <section>
       <h1>Create Account</h1>
 
-      <form onSubmit={handleSubmit(doLogin)}>
+      <form onSubmit={handleSubmit(doSignup)}>
         <label htmlFor="email">email</label>
         <br />
         <input
@@ -47,4 +47,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Signup;
